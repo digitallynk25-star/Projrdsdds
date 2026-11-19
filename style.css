@@ -1,0 +1,240 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 16px;
+    background-color: #6A287E;
+    border-radius: 14px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dfa2f0;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.halaman {
+   display: none;
+    background-color: white;
+    border: 2px solid #6a287e;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+
+.halaman h2 {
+    color: #6a287e;
+    margin-top: 0;
+}
+
+#beranda {
+    display: block;
+}
+
+.halaman:target {
+    display: block;
+}
+
+main:has(.halaman:target) #beranda:not(:target) {
+    display: none;
+}
+
+/* ini nav bar :) */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    text-align: center;
+    border-radius: 12px; 
+    overflow: hidden;   
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(214, 16, 168);
+    color: white;
+}
+
+nav {
+    margin-bottom: 12px;
+  
+}
+
+/* ini profile */
+#prfl {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    text-align: center;
+    border-radius: 12px;
+}
+
+#prfl p {
+    color: black;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.profil-container {
+    display: flex;
+    align-items: center; 
+    gap: 30px;           
+    text-align: left; 
+    margin-top: 20px;  
+}
+.profil-teks {
+    flex: 1;
+}
+
+.profil-gambar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#prfl img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/*ini pencapaian */
+#achv {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#achv img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.achv-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.achv-teks {
+    flex: 1;
+}
+
+.achv-gambar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ini prgm */
+#prgm {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* ini fcility */
+#fclity {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#fclity img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#fclity p {
+    color: black;
+    column-count: 3;
+    column-gap: 20px;
+    padding: auto;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* ini cntct */
+#cntct {
+    border: 2px solid #6a287e;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* --- Media Queries (Responsif untuk HP & Tablet) --- */
+ @media (max-width: 768px) {
+    
+    profil-container,
+    .achv-container {
+        flex-direction: column;
+    }
+
+    .profil-container {
+        flex-direction: column;
+    }
+
+    #body {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #fclity p {
+        column-count: 2;
+        padding-left: 15px;
+    }
+ }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        #container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    #fclity p {
+        column-count: 2;
+    }
+}
